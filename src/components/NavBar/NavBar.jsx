@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/Logo.png";
+import Button from "../Button/Button";
 
 const NavBar = () => {
   return (
@@ -10,10 +11,10 @@ const NavBar = () => {
         </div>
 
         <div class="navbar-center  hidden md:flex">
-          <a class="btn btn-ghost bg-gray-200 text-xl">Sort by view</a>
+          <Button className = "bg-gray-100 ">Sort by view</Button>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-red-500 text-white">Blog</a>
+          <Button  className = "bg-red-500 text-white">Blog</Button>
         </div>
       </div>
     </div>
