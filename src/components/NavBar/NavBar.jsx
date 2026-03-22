@@ -10,7 +10,7 @@ const NavBar = () => {
           <img src={logo} alt="" />
         </div>
 
-        <div class="navbar-center  hidden md:flex">
+        <div className="navbar-center  hidden md:flex">
           <Button className = "bg-gray-100 ">Sort by view</Button>
         </div>
         <div className="navbar-end">
