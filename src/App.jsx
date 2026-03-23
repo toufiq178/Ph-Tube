@@ -16,7 +16,7 @@ function App() {
       <NavBar></NavBar>
       <ButtonContainer></ButtonContainer>
 
-      <Suspense fallback = {<span className="loading loading-spinner loading-2xl text-red-500"></span>}>
+      <Suspense fallback = {<span className="loading loading-spinner loading-xl text-red-500 flex justify-self-center mt-20"></span>}>
         <Videos promiseVideos = {promiseVideos}></Videos>
       </Suspense>
 
