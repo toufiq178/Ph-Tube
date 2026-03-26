@@ -3,7 +3,7 @@ import verify from"../../assets/verify.png"
 
 const Profile = ({author}) => {
 
-    console.log(author);
+    // console.log(author);
     
     return (
         <div className="flex items-center mt-3 gap-2">
