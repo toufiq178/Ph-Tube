@@ -5,7 +5,7 @@ const ButtonContainer = ({
   promiseCategories,
   activeCategory,
   setActiveCategory,
-  isSearchActive,
+  // isSearchActive,
 }) => {
   const categories = use(promiseCategories);
   //   console.log(categories.categories.category);
@@ -38,7 +38,7 @@ const ButtonContainer = ({
           onClick={() => {
             handleClick(ctg.category_id);
           }}
-          disabled={isSearchActive}
+          // disabled={isSearchActive}
           key={ctg.category_id}
           className={
             activeCategory === ctg.category_id

@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/Logo.png";
 import Button from "../Button/Button";
 
-const NavBar = ({ onSearch }) => {
+const NavBar = ({ handleSearch }) => {
   return (
     <div className="container mx-auto">
       <div className="navbar bg-base-100 border-b border-gray-300 pt-5 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -20,7 +20,7 @@ const NavBar = ({ onSearch }) => {
             type="text"
             placeholder="Search"
             className="input input-bordered w-full max-w-xs md:max-w-60"
-            onChange={(e) => onSearch(e.target.value)}
+            onChange={(e) => handleSearch(e.target.value)}
           />
 
          

@@ -22,13 +22,13 @@ function App() {
 
 
 
-  
+
   //////////////////////////////
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
   const [searchPromise, setSearchPromise] = useState(null);
 
   const handleSearch = (query) => {
-    setSearchQuery(query);
+    // setSearchQuery(query);
 
     if (query.trim() === "") {
       setSearchPromise(null);
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      <NavBar onSearch={handleSearch}></NavBar>
+      <NavBar handleSearch={handleSearch}></NavBar>
 
       <Suspense
         
@@ -57,15 +57,15 @@ function App() {
 
           //////////
           promiseCategories={promiseCategories}
-          isSearchActive={!!searchQuery}
+          // isSearchActive={!!searchQuery}
           ///////////
 
         ></ButtonContainer>
       </Suspense>
 
       <Suspense
-        fallback={
-          <span className="loading loading-spinner loading-xl text-red-500 flex justify-self-center mt-20"></span>
+        fallback={ <div className="h-[40vh] md:h-[50vh] lg:h-[60vh] flex justify-center items-center"><span className="loading loading-spinner loading-xl text-red-500 "></span></div>
+          
         }
       >
         <Videos
@@ -74,7 +74,7 @@ function App() {
 
           ///////////////////
           promiseVideos={searchPromise || promiseVideos}
-          searchQuery={searchQuery}
+          // searchQuery={searchQuery}
           ////////////////
 
         ></Videos>

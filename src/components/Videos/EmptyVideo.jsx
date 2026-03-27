@@ -7,7 +7,7 @@ const EmptyVideo = () => {
             
             <div className='flex flex-col justify-center items-center gap-5'>
                 <img src={emptyImg} alt="" />
-                <h1 className='font-bold text-4xl'>Oops!! Sorry, There is no content here</h1>
+                <h1 className='font-bold text-2xl px-5 md:text-4xl'>Oops!! Sorry, There is no content here</h1>
             </div>
         </div>
     );
