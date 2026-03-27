@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="navbar bg-base-100 border-b border-gray-300 pt-5 md:pt-10">
         <div className="navbar-start">
           <img src={logo} alt="" />

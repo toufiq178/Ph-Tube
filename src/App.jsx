@@ -3,6 +3,7 @@ import "./App.css";
 import ButtonContainer from "./components/ButtonContainer/ButtonContainer";
 import NavBar from "./components/NavBar/NavBar";
 import Videos from "./components/Videos/Videos";
+import Footer from "./components/Footer/Footer";
 
 const promiseVideos = fetch(
   " https://openapi.programming-hero.com/api/phero-tube/videos",
@@ -41,6 +42,7 @@ function App() {
         ></Videos>
       </Suspense>
 
+        <Footer/>
       {/* <h1 className="font-extrabold text-4xl text-center pt-20">Hello React</h1> */}
     </>
   );
