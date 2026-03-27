@@ -20,9 +20,7 @@ function App() {
       <NavBar></NavBar>
 
       <Suspense
-        fallback={
-          <span className="loading loading-spinner loading-xl text-red-500 flex justify-self-center mt-20"></span>
-        }
+        
       >
         <ButtonContainer
           activeCategory={activeCategory}
