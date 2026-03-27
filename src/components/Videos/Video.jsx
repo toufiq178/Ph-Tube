@@ -10,7 +10,7 @@ const Video = ({ video }) => {
 
 
   return (
-    <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white">
+    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-white ">
       <img
         className="w-full h-52 object-cover"
         src={video.thumbnail}

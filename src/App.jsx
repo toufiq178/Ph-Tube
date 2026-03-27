@@ -13,11 +13,40 @@ const promiseCategories = fetch(
   "  https://openapi.programming-hero.com/api/phero-tube/categories",
 ).then((res) => res.json());
 
+
+
+
+
 function App() {
   const [activeCategory, setActiveCategory] = useState("All");
+
+
+
+  
+  //////////////////////////////
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchPromise, setSearchPromise] = useState(null);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+
+    if (query.trim() === "") {
+      setSearchPromise(null);
+      return;
+    }
+
+    const newPromise = fetch(
+      `https://openapi.programming-hero.com/api/phero-tube/videos?title=${query}`
+    ).then((res) => res.json());
+
+    setSearchPromise(newPromise);
+  };
+////////////////////////////////
+
+
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar onSearch={handleSearch}></NavBar>
 
       <Suspense
         
@@ -25,7 +54,12 @@ function App() {
         <ButtonContainer
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
+
+          //////////
           promiseCategories={promiseCategories}
+          isSearchActive={!!searchQuery}
+          ///////////
+
         ></ButtonContainer>
       </Suspense>
 
@@ -36,7 +70,13 @@ function App() {
       >
         <Videos
           activeCategory={activeCategory}
-          promiseVideos={promiseVideos}
+          // promiseVideos={promiseVideos}
+
+          ///////////////////
+          promiseVideos={searchPromise || promiseVideos}
+          searchQuery={searchQuery}
+          ////////////////
+
         ></Videos>
       </Suspense>
 
